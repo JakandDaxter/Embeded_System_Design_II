@@ -1,0 +1,12 @@
+comPort                   = 4
+baudRate                  = 115200
+Brightness                = 53
+phi_face                  = -0.000709111893852
+zone                      = 9.0
+FOV                       = 2.0
+faceTrackingWidth         = 0.6
+faceTrackingHeight        = 0.1
+faceTrackingHysteresis    = 0.2
+hysteresis                = 0.2
+offset                    = 0.1
+zoneWidth                 = 0.2
