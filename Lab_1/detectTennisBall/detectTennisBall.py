@@ -45,7 +45,6 @@ while 1:
     mask = cv2.dilate(mask, None, iterations=2)
 
     new_image = cv2.convertScaleAbs(small_img, alpha=alpha, beta=beta)
-
     maskedImage = cv2.bitwise_and(small_img, new_image, mask=mask)
 
     cv2.imshow('Mask', mask)
