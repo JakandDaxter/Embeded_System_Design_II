@@ -161,9 +161,9 @@ class Calibration(QtGui.QWidget):
         self.radioG = QtGui.QRadioButton("Green Detection")
         self.radioG.toggled.connect(lambda: self.btnstate(self.radioG))
 
-        self.loadImageButton = QtGui.QPushButton("Load Image")
-        self.loadImageButton.setSizePolicy(QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Expanding)
-        self.loadImageButton.clicked[bool].connect(self.loadImageButtonClicked)
+        # self.loadImageButton = QtGui.QPushButton("Load Image")
+        # self.loadImageButton.setSizePolicy(QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Expanding)
+        # self.loadImageButton.clicked[bool].connect(self.loadImageButtonClicked)
 
         self.loadFileButton = QtGui.QPushButton("Load File")
         self.loadFileButton.setSizePolicy(QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Expanding)
@@ -174,7 +174,7 @@ class Calibration(QtGui.QWidget):
         self.saveFileButton.clicked[bool].connect(self.saveFileButtonClicked)
 
         layout2 = QtGui.QHBoxLayout()
-        layout2.addWidget(self.loadImageButton)
+        # layout2.addWidget(self.loadImageButton)
         layout2.addWidget(self.loadFileButton)
         layout2.addWidget(self.saveFileButton)
         layout3 = QtGui.QHBoxLayout()
@@ -301,55 +301,45 @@ class Calibration(QtGui.QWidget):
     def btnstate(self, b):
         if b.text() == "Blue Detection":
             if b.isChecked():
-                fileName = QtGui.QFileDialog.getOpenFileName(None, "Enter Filename.", ".txt", "(*.txt)")
-                if not fileName:
-                    print('Could not open or find the image: ', str(fileName))
-                    pass
-                else:
-                    with open(fileName) as f:
-                        globals.Brightness = int(f.readline().split("= ")[1])
-                        globals.contrast = float(f.readline().split("= ")[1])
-                        globals.rMin = float(f.readline().split("= ")[1])
-                        globals.rMax = float(f.readline().split("= ")[1])
-                        globals.bMin = float(f.readline().split("= ")[1])
-                        globals.bMax = float(f.readline().split("= ")[1])
-                        globals.gMin = float(f.readline().split("= ")[1])
-                        globals.gMax = float(f.readline().split("= ")[1])
-                    self.brightness.setValue(globals.Brightness)
-                    self.Contrast.setValue(globals.contrast)
-                    self.rMin.setValue(globals.rMin)
-                    self.rMax.setValue(globals.rMax)
-                    self.bMin.setValue(globals.bMin)
-                    self.bMax.setValue(globals.bMax)
-                    self.gMin.setValue(globals.gMin)
-                    self.gMax.setValue(globals.gMax)
+                with open("bluedetection.txt") as f:
+                    globals.Brightness = int(f.readline().split("= ")[1])
+                    globals.contrast = float(f.readline().split("= ")[1])
+                    globals.rMin = float(f.readline().split("= ")[1])
+                    globals.rMax = float(f.readline().split("= ")[1])
+                    globals.bMin = float(f.readline().split("= ")[1])
+                    globals.bMax = float(f.readline().split("= ")[1])
+                    globals.gMin = float(f.readline().split("= ")[1])
+                    globals.gMax = float(f.readline().split("= ")[1])
+                self.brightness.setValue(globals.Brightness)
+                self.Contrast.setValue(globals.contrast)
+                self.rMin.setValue(globals.rMin)
+                self.rMax.setValue(globals.rMax)
+                self.bMin.setValue(globals.bMin)
+                self.bMax.setValue(globals.bMax)
+                self.gMin.setValue(globals.gMin)
+                self.gMax.setValue(globals.gMax)
             else:
                 pass
-	
+
         if b.text() == "Green Detection":
             if b.isChecked():
-                fileName = QtGui.QFileDialog.getOpenFileName(None, "Enter Filename.", ".txt", "(*.txt)")
-                if not fileName:
-                    print('Could not open or find the image: ', str(fileName))
-                    pass
-                else:
-                    with open(fileName) as f:
-                        globals.Brightness = int(f.readline().split("= ")[1])
-                        globals.contrast = float(f.readline().split("= ")[1])
-                        globals.rMin = float(f.readline().split("= ")[1])
-                        globals.rMax = float(f.readline().split("= ")[1])
-                        globals.bMin = float(f.readline().split("= ")[1])
-                        globals.bMax = float(f.readline().split("= ")[1])
-                        globals.gMin = float(f.readline().split("= ")[1])
-                        globals.gMax = float(f.readline().split("= ")[1])
-                    self.brightness.setValue(globals.Brightness)
-                    self.Contrast.setValue(globals.contrast)
-                    self.rMin.setValue(globals.rMin)
-                    self.rMax.setValue(globals.rMax)
-                    self.bMin.setValue(globals.bMin)
-                    self.bMax.setValue(globals.bMax)
-                    self.gMin.setValue(globals.gMin)
-                    self.gMax.setValue(globals.gMax)
+                with open("greendetection.txt") as f:
+                    globals.Brightness = int(f.readline().split("= ")[1])
+                    globals.contrast = float(f.readline().split("= ")[1])
+                    globals.rMin = float(f.readline().split("= ")[1])
+                    globals.rMax = float(f.readline().split("= ")[1])
+                    globals.bMin = float(f.readline().split("= ")[1])
+                    globals.bMax = float(f.readline().split("= ")[1])
+                    globals.gMin = float(f.readline().split("= ")[1])
+                    globals.gMax = float(f.readline().split("= ")[1])
+                self.brightness.setValue(globals.Brightness)
+                self.Contrast.setValue(globals.contrast)
+                self.rMin.setValue(globals.rMin)
+                self.rMax.setValue(globals.rMax)
+                self.bMin.setValue(globals.bMin)
+                self.bMax.setValue(globals.bMax)
+                self.gMin.setValue(globals.gMin)
+                self.gMax.setValue(globals.gMax)
             else:
                 pass
 

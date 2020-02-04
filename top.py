@@ -1,5 +1,3 @@
-# Dr. Kaputa
-# PyQt4 OpenCV Integration
 import sys
 from PyQt4.QtGui import *
 from PyQt4.QtCore import *
@@ -49,6 +47,12 @@ class MainWindow(QMainWindow):
             self.setWindowState(Qt.WindowState(self.settings.value("windowState").toInt()[0]))
 
     def setupDocks(self):
+
+        bar = self.menuBar()
+        file = bar.addMenu("File")
+        file.addAction("Upload")
+        file.triggered[QAction].connect(self.processtrigger)
+
         self.faceTrackerDock = QDockWidget(self)
         self.faceTrackerDock.setWidget(self.faceTracker)
         self.faceTrackerDock.setWindowTitle("Image")
@@ -73,6 +77,10 @@ class MainWindow(QMainWindow):
         self.setDockOptions(DOCKOPTIONS)
         self.setTabPosition(Qt.AllDockWidgetAreas, QTabWidget.North)
 
+        # layout = QHBoxLayout()
+        # bar = self.menuBar()
+        # file = bar.addMenu("File")
+
     def closeEvent(self, event):
         self.settings.setValue('geometry', self.saveGeometry())
         self.settings.setValue('state', self.saveState())
@@ -82,7 +90,13 @@ class MainWindow(QMainWindow):
         self.settings.sync()
         QMainWindow.closeEvent(self, event)
 
-
+    def processtrigger(self):
+        fileName = QtGui.QFileDialog.getOpenFileName(None, "Enter Filename.", ".jpg", "(*.jpg)")
+        if not fileName:
+            print('Could not open or find the image: ', str(fileName))
+            pass
+        else:
+            globals.image_filepath = fileName
 # start of the program that instantiates a MainWindow class
 def main():
     app = QApplication(sys.argv)
