@@ -4,12 +4,12 @@ import struct
 
 
 class globals():
-    rMin = 4
-    rMax = 23
-    gMin = 30
-    gMax = 0
-    bMin = 0
-    bMax = 60
+    rMin = 100
+    rMax = 100
+    gMin = 100
+    gMax = 100
+    bMin = 100
+    bMax = 100
     Brightness = 2
     contrast = 25
     image_filepath = "../images/loadfile.jpg"

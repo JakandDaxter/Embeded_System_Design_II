@@ -13,7 +13,7 @@ class MainWindow(QMainWindow):
     def __init__(self):
         super(MainWindow, self).__init__()
 
-        self.setWindowTitle("Tennia Ball Detection")
+        self.setWindowTitle("Tennis Ball Detection")
         self.settings = QSettings("RIT", "Aliana")
 
         # open default file

@@ -26,9 +26,11 @@ class RecordVideo(QtCore.QObject):
     def timerEvent(self, event):
         if (event.timerId() != self.timer.timerId()):
             return
-
         data = cv2.imread(str(globals.image_filepath))
-        self.image_data.emit(data)
+        if data is None:
+            pass
+        else:
+            self.image_data.emit(data)
 
 
 # Widget that is loaded into the dock
@@ -44,6 +46,9 @@ class FaceTracker(QtWidgets.QWidget):
         if globals.filterOption == 0:
             self.image = self.get_qimage(image_data)
         else:
+            img = cv2.imread(str(globals.image_filepath))
+            data = cv2.resize(img,(640,480))
+                        
             # get info from track bar and apply to result
             rMin = globals.rMin
             rMax = globals.rMax
@@ -53,23 +58,18 @@ class FaceTracker(QtWidgets.QWidget):
             bMax = globals.bMax
             alpha = globals.Brightness
             beta = globals.contrast
-
             # generate threshold array
             lower = np.array([bMin, gMin, rMin])
             upper = np.array([bMax, gMax, rMax])
-
-            mask = cv2.inRange(image_data, lower, upper)
+            
+            mask = cv2.inRange(data, lower, upper)
             mask = cv2.erode(mask, None, iterations=2)
             mask = cv2.dilate(mask, None, iterations=2)
 
-            new_image = cv2.convertScaleAbs(image_data, alpha=alpha, beta=beta)
-            maskedImage = cv2.bitwise_and(image_data, new_image, mask=mask)
+            new_image = cv2.convertScaleAbs(data, alpha=alpha, beta=beta)
+            maskedImage = cv2.bitwise_and(data, new_image, mask=mask)
 
-            cv2.imshow('Mask', mask)
-            cv2.imshow('Masked Image', maskedImage)
-            cv2.imshow('New Image', new_image)
-
-            clone_img = copy.copy(image_data)
+            clone_img = copy.copy(data)
 
             cnts = cv2.findContours(mask.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)[-2]
             center = None
@@ -89,8 +89,26 @@ class FaceTracker(QtWidgets.QWidget):
                     # then update the list of tracked points
                     cv2.circle(clone_img, (int(x), int(y)), int(radius), (0, 255, 255), 2)
                     cv2.circle(clone_img, center, 5, (0, 0, 255), -1)
+
+                     # font
+                    font = cv2.FONT_HERSHEY_SIMPLEX 
+
+                    # org 
+                    org = (50, 50) 
+
+                    # fontScale 
+                    fontScale = 1
+
+                    # Blue color in BGR 
+                    color = (255, 0, 0) 
+
+                    # Line thickness of 2 px 
+                    thickness = 2
+
+                    # Using cv2.putText() method 
+                    image = cv2.putText(clone_img,'X: ' + str(round(x,2)) + " Y: " + str(round(y,2)), org, font,
+                                       fontScale, color, thickness, cv2.LINE_AA)
             self.image = self.get_qimage(clone_img)
-            cv2.imshow('Result', clone_img)
             k = cv2.waitKey(5) & 0xFF
             if k == 27:
                 pass
@@ -125,58 +143,6 @@ class FaceTracker(QtWidgets.QWidget):
     def resizeEvent(self, event):
         self.dockWidth = self.width()
         self.dockHeight = self.height()
-
-    # def filterImage(self, data):
-        # # get info from track bar and apply to result
-        # rMin = globals.rMin
-        # rMax = globals.rMax
-        # gMin = globals.gMin
-        # gMax = globals.gMax
-        # bMin = globals.bMin
-        # bMax = globals.bMax
-        # alpha = globals.Brightness
-        # beta = globals.contrast
-        #
-        # # generate threshold array
-        # lower = np.array([bMin, gMin, rMin])
-        # upper = np.array([bMax, gMax, rMax])
-        #
-        # mask = cv2.inRange(data, lower, upper)
-        # mask = cv2.erode(mask, None, iterations=2)
-        # mask = cv2.dilate(mask, None, iterations=2)
-        #
-        # new_image = cv2.convertScaleAbs(data, alpha=alpha, beta=beta)
-        # maskedImage = cv2.bitwise_and(data, new_image, mask=mask)
-        #
-        # cv2.imshow('Mask', mask)
-        # cv2.imshow('Masked Image', maskedImage)
-        # cv2.imshow('New Image', new_image)
-        #
-        # clone_img = copy.copy(data)
-        #
-        # cnts = cv2.findContours(mask.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)[-2]
-        # center = None
-        # # only proceed if at least one contour was found
-        # if len(cnts) > 0:
-        #     # find the largest contour in the mask, then use
-        #     # it to compute the minimum enclosing circle and
-        #     # centroid
-        #     c = max(cnts, key=cv2.contourArea)
-        #     ((x, y), radius) = cv2.minEnclosingCircle(c)
-        #     M = cv2.moments(c)
-        #     center = (int(M["m10"] / M["m00"]), int(M["m01"] / M["m00"]))
-        #
-        #     # only proceed if the radius meets a minimum size
-        #     if radius > 10:
-        #         # draw the circle and centroid on the frame,
-        #         # then update the list of tracked points
-        #         cv2.circle(clone_img, (int(x), int(y)), int(radius), (0, 255, 255), 2)
-        #         cv2.circle(clone_img, center, 5, (0, 0, 255), -1)
-        #
-        # cv2.imshow('Result', clone_img)
-        # k = cv2.waitKey(5) & 0xFF
-        # if k == 27:
-        #     pass
 
 
 class FaceTrackerHolder(QtWidgets.QWidget):
