@@ -14,18 +14,6 @@ class MainWindow(QMainWindow):
         self.setWindowTitle("Tennis Ball Detection")
         self.settings = QSettings("RIT", "Aliana")
 
-        # open default file
-        fileName = 'parameters.txt'
-        with open(fileName) as f:
-            globals.Brightness = int(f.readline().split("= ")[1])
-            globals.contrast = float(f.readline().split("= ")[1])
-            globals.rMin = float(f.readline().split("= ")[1])
-            globals.rMax = float(f.readline().split("= ")[1])
-            globals.bMin = float(f.readline().split("= ")[1])
-            globals.bMax = float(f.readline().split("= ")[1])
-            globals.gMin = float(f.readline().split("= ")[1])
-            globals.gMax = float(f.readline().split("= ")[1])
-
             # instantiate the dock widgets
         self.faceTracker = FaceTrackerHolder(self)
         self.calibration = Calibration(self)
