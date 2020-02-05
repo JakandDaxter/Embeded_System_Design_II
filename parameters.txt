@@ -1,0 +1,7 @@
+Brightness                = 30
+redMin                    = 1
+redMax                    = 1
+greenMin                  = 1
+greenMax                  = 1
+blueMin                   = 1
+blueMax                   = 1
