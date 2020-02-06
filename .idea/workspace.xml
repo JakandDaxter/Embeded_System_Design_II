@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5cd7770c-9df0-45c2-a430-9ab989b96a3f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/calibration.py" beforeDir="false" afterPath="$PROJECT_DIR$/calibration.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/globals.py" beforeDir="false" afterPath="$PROJECT_DIR$/globals.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1XN0lwbuABtStRdxQzWp28s3fNz" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunManager">
+    <configuration name="top" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="Embeded_System_Design_II" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$USER_HOME$/anaconda2/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/top.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5cd7770c-9df0-45c2-a430-9ab989b96a3f" name="Default Changelist" comment="" />
+      <created>1580871399423</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1580871399423</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1573" y="-88" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1580949091284">
+      <screen x="1366" y="-151" width="1920" height="1057" />
+    </state>
+    <state x="181" y="63" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1580924593387" />
+    <state x="1573" y="-88" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1366.745/1366.-151.1920.1057@1366.-151.1920.1057" timestamp="1580949091284" />
+    <state x="147" y="46" key="#com.intellij.execution.impl.EditConfigurationsDialog/1366.-174.1920.1080/0.0.1366.768@0.0.1366.768" timestamp="1580871985577" />
+    <state x="471" y="173" key="EnvironmentVariablesDialog" timestamp="1580924580653">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="471" y="173" key="EnvironmentVariablesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1580924580653" />
+    <state width="1450" height="198" key="GridCell.Tab.0.bottom" timestamp="1580949117034">
+      <screen x="1366" y="-151" width="1920" height="1057" />
+    </state>
+    <state width="1659" height="202" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1580924475753" />
+    <state width="1450" height="198" key="GridCell.Tab.0.bottom/0.23.1366.745/1366.-151.1920.1057@1366.-151.1920.1057" timestamp="1580949117034" />
+    <state width="1450" height="198" key="GridCell.Tab.0.center" timestamp="1580949117032">
+      <screen x="1366" y="-151" width="1920" height="1057" />
+    </state>
+    <state width="1659" height="202" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1580924475752" />
+    <state width="1450" height="198" key="GridCell.Tab.0.center/0.23.1366.745/1366.-151.1920.1057@1366.-151.1920.1057" timestamp="1580949117032" />
+    <state width="1450" height="198" key="GridCell.Tab.0.left" timestamp="1580949117031">
+      <screen x="1366" y="-151" width="1920" height="1057" />
+    </state>
+    <state width="1659" height="202" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1580924475751" />
+    <state width="1450" height="198" key="GridCell.Tab.0.left/0.23.1366.745/1366.-151.1920.1057@1366.-151.1920.1057" timestamp="1580949117031" />
+    <state width="1450" height="198" key="GridCell.Tab.0.right" timestamp="1580949117033">
+      <screen x="1366" y="-151" width="1920" height="1057" />
+    </state>
+    <state width="1659" height="202" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1580924475752" />
+    <state width="1450" height="198" key="GridCell.Tab.0.right/0.23.1366.745/1366.-151.1920.1057@1366.-151.1920.1057" timestamp="1580949117033" />
+    <state x="1636" y="-119" key="SettingsEditor" timestamp="1580937692494">
+      <screen x="1366" y="-151" width="1920" height="1057" />
+    </state>
+    <state x="1636" y="-119" key="SettingsEditor/0.23.1366.745/1366.-151.1920.1057@1366.-151.1920.1057" timestamp="1580937692494" />
+    <state x="192" y="23" key="SettingsEditor/1366.-174.1920.1080/0.0.1366.768@0.0.1366.768" timestamp="1580871682278" />
+    <state x="376" y="228" key="com.intellij.ide.util.TipDialog" timestamp="1580871412584">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="376" y="228" key="com.intellij.ide.util.TipDialog/1366.-174.1920.1080/0.0.1366.768@0.0.1366.768" timestamp="1580871412584" />
+  </component>
+</project>
