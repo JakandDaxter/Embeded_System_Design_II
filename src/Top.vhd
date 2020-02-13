@@ -71,10 +71,10 @@ begin
           counter_sig <= 0;
         else
             counter_sig <= counter_sig + 1;
-            output_sig <= '0';
-    end if;
+            --output_sig <= '0';
+		end if;
+	   end if;
   end if;
-end if;
 end process;    
 
         
