@@ -1,0 +1,1153 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Tue Feb 18 18:18:13 2020
+# Process ID: 12396
+# Current directory: S:/post/snickBlink
+# Command line: vivado.exe -notrace -mode batch -source project.tcl
+# Log file: S:/post/snickBlink/vivado.log
+# Journal file: S:/post/snickBlink\vivado.jou
+#-----------------------------------------------------------
+source project.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 's:/post/snickBlink/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+INFO: [BD 41-434] Could not find an IP with XCI file by name: design_1_processing_system7_0_0 
+INFO: [BD 41-434] Could not find an IP with XCI file by name: design_1_blink_0_0 
+INFO: [BD 41-433] 
+Design successfully migrated to use XCI files...
+WARNING: [BD 41-927] Following properties on pin /blink_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_0_FCLK_CLK0 
+Wrote  : <S:\post\snickBlink\src\design_1.bd> 
+VHDL Output written to : S:/post/snickBlink/src/synth/design_1.vhd
+VHDL Output written to : S:/post/snickBlink/src/sim/design_1.vhd
+VHDL Output written to : S:/post/snickBlink/src/hdl/design_1_wrapper.vhd
+make_wrapper: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 578.984 ; gain = 192.457
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+VHDL Output written to : S:/post/snickBlink/src/synth/design_1.vhd
+VHDL Output written to : S:/post/snickBlink/src/sim/design_1.vhd
+VHDL Output written to : S:/post/snickBlink/src/hdl/design_1_wrapper.vhd
+WARNING: [IP_Flow 19-5160] IP 'design_1_processing_system7_0_0' detected simulation language mismatch. Simulation type 'rtl' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'Any Language' outputs instead.
+WARNING: [IP_Flow 19-5160] IP 'design_1_processing_system7_0_0' detected simulation language mismatch. Simulation type 'tlm_dpi' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'Any Language' outputs instead.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block blink_0 .
+Exporting to file S:/post/snickBlink/src/hw_handoff/design_1.hwh
+Generated Block Design Tcl file S:/post/snickBlink/src/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File S:/post/snickBlink/src/synth/design_1.hwdef
+[Tue Feb 18 18:18:55 2020] Launched design_1_blink_0_0_synth_1, design_1_processing_system7_0_0_synth_1...
+Run output will be captured here:
+design_1_blink_0_0_synth_1: S:/post/snickBlink/project/snickBlink.runs/design_1_blink_0_0_synth_1/runme.log
+design_1_processing_system7_0_0_synth_1: S:/post/snickBlink/project/snickBlink.runs/design_1_processing_system7_0_0_synth_1/runme.log
+[Tue Feb 18 18:18:55 2020] Launched synth_1...
+Run output will be captured here: S:/post/snickBlink/project/snickBlink.runs/synth_1/runme.log
+launch_runs: Time (s): cpu = 00:00:14 ; elapsed = 00:00:27 . Memory (MB): peak = 665.430 ; gain = 86.445
+[Tue Feb 18 18:18:55 2020] Waiting for synth_1 to finish...
+
+*** Running vivado
+    with args -log design_1_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
+
+
+****** Vivado v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source design_1_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 's:/post/snickBlink/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+Command: synth_design -top design_1_wrapper -part xc7z010clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 8208 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 816.527 ; gain = 176.750
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'design_1_wrapper' [S:/post/snickBlink/project/snickBlink.srcs/sources_1/imports/hdl/design_1_wrapper.vhd:41]
+INFO: [Synth 8-3491] module 'design_1' declared at 'S:/post/snickBlink/src/synth/design_1.vhd:14' bound to instance 'design_1_i' of component 'design_1' [S:/post/snickBlink/project/snickBlink.srcs/sources_1/imports/hdl/design_1_wrapper.vhd:69]
+INFO: [Synth 8-638] synthesizing module 'design_1' [S:/post/snickBlink/src/synth/design_1.vhd:45]
+INFO: [Synth 8-3491] module 'design_1_blink_0_0' declared at 'S:/post/snickBlink/project/snickBlink.runs/synth_1/.Xil/Vivado-12748-ECTET-1360-13/realtime/design_1_blink_0_0_stub.vhdl:5' bound to instance 'blink_0' of component 'design_1_blink_0_0' [S:/post/snickBlink/src/synth/design_1.vhd:202]
+INFO: [Synth 8-638] synthesizing module 'design_1_blink_0_0' [S:/post/snickBlink/project/snickBlink.runs/synth_1/.Xil/Vivado-12748-ECTET-1360-13/realtime/design_1_blink_0_0_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'design_1_processing_system7_0_0' declared at 'S:/post/snickBlink/project/snickBlink.runs/synth_1/.Xil/Vivado-12748-ECTET-1360-13/realtime/design_1_processing_system7_0_0_stub.vhdl:5' bound to instance 'processing_system7_0' of component 'design_1_processing_system7_0_0' [S:/post/snickBlink/src/synth/design_1.vhd:208]
+INFO: [Synth 8-638] synthesizing module 'design_1_processing_system7_0_0' [S:/post/snickBlink/project/snickBlink.runs/synth_1/.Xil/Vivado-12748-ECTET-1360-13/realtime/design_1_processing_system7_0_0_stub.vhdl:76]
+INFO: [Synth 8-256] done synthesizing module 'design_1' (1#1) [S:/post/snickBlink/src/synth/design_1.vhd:45]
+INFO: [Synth 8-256] done synthesizing module 'design_1_wrapper' (2#1) [S:/post/snickBlink/project/snickBlink.srcs/sources_1/imports/hdl/design_1_wrapper.vhd:41]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 879.570 ; gain = 239.793
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 879.570 ; gain = 239.793
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 879.570 ; gain = 239.793
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc] for cell 'design_1_i/processing_system7_0'
+Finished Parsing XDC File [s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc] for cell 'design_1_i/processing_system7_0'
+Parsing XDC File [s:/post/snickBlink/src/ip/design_1_blink_0_0/design_1_blink_0_0/design_1_blink_0_0_in_context.xdc] for cell 'design_1_i/blink_0'
+Finished Parsing XDC File [s:/post/snickBlink/src/ip/design_1_blink_0_0/design_1_blink_0_0/design_1_blink_0_0_in_context.xdc] for cell 'design_1_i/blink_0'
+Parsing XDC File [S:/post/snickBlink/src/constraints.xdc]
+Finished Parsing XDC File [S:/post/snickBlink/src/constraints.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [S:/post/snickBlink/src/constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [S:/post/snickBlink/project/snickBlink.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [S:/post/snickBlink/project/snickBlink.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 924.910 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 924.910 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 924.910 ; gain = 285.133
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 924.910 ; gain = 285.133
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[0]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 2).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_addr[0]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 3).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[10]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 4).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_addr[10]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 5).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[11]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 6).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_addr[11]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 7).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[12]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 8).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_addr[12]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 9).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[13]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 10).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_addr[13]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 11).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[14]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 12).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_addr[14]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 13).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[1]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 14).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_addr[1]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 15).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[2]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 16).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_addr[2]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 17).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[3]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 18).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_addr[3]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 19).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[4]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 20).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_addr[4]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 21).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[5]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 22).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_addr[5]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 23).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[6]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 24).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_addr[6]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 25).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[7]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 26).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_addr[7]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 27).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[8]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 28).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_addr[8]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 29).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[9]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 30).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_addr[9]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 31).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_ba[0]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 32).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_ba[0]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 33).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_ba[1]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 34).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_ba[1]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 35).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_ba[2]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 36).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_ba[2]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 37).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_cas_n. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 38).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_cas_n. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 39).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_cke. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 40).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_cke. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 41).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_cs_n. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 42).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_cs_n. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 43).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_ck_p. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 44).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_ck_p. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 45).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_ck_n. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 46).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_ck_n. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 47).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dm[0]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 48).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dm[0]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 49).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dm[1]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 50).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dm[1]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 51).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dm[2]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 52).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dm[2]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 53).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dm[3]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 54).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dm[3]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 55).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dqs_p[0]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 56).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dqs_p[0]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 57).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dqs_p[1]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 58).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dqs_p[1]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 59).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dqs_p[2]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 60).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dqs_p[2]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 61).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dqs_p[3]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 62).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dqs_p[3]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 63).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dqs_n[0]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 64).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dqs_n[0]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 65).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dqs_n[1]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 66).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dqs_n[1]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 67).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dqs_n[2]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 68).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dqs_n[2]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 69).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dqs_n[3]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 70).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dqs_n[3]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 71).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[0]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 72).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[0]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 73).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[10]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 74).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[10]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 75).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[11]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 76).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[11]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 77).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[12]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 78).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[12]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 79).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[13]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 80).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[13]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 81).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[14]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 82).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[14]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 83).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[15]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 84).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[15]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 85).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[16]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 86).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[16]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 87).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[17]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 88).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[17]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 89).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[18]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 90).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[18]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 91).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[19]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 92).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[19]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 93).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[1]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 94).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[1]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 95).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[20]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 96).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[20]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 97).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[21]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 98).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[21]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 99).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[22]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 100).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[22]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 101).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[23]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 102).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[23]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 103).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[24]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 104).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[24]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 105).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[25]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 106).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[25]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 107).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[26]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 108).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[26]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 109).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[27]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 110).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[27]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 111).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[28]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 112).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[28]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 113).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[29]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 114).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[29]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 115).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[2]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 116).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[2]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 117).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[30]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 118).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[30]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 119).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[31]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 120).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[31]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 121).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[3]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 122).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[3]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 123).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[4]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 124).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[4]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 125).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[5]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 126).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[5]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 127).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[6]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 128).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[6]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 129).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[7]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 130).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[7]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 131).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[8]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 132).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[8]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 133).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[9]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 134).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[9]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 135).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_reset_n. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 136).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_reset_n. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 137).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_odt. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 138).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_odt. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 139).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_ras_n. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 140).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_ras_n. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 141).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_ddr_vrn. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 142).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_ddr_vrn. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 143).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_ddr_vrp. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 144).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_ddr_vrp. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 145).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_we_n. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 146).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_we_n. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 147).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[0]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 148).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[0]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 149).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[10]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 150).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[10]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 151).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[11]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 152).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[11]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 153).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[12]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 154).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[12]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 155).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[13]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 156).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[13]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 157).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[14]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 158).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[14]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 159).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[15]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 160).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[15]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 161).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[16]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 162).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[16]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 163).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[17]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 164).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[17]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 165).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[18]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 166).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[18]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 167).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[19]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 168).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[19]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 169).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[1]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 170).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[1]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 171).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[20]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 172).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[20]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 173).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[21]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 174).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[21]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 175).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[22]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 176).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[22]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 177).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[23]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 178).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[23]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 179).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[24]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 180).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[24]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 181).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[25]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 182).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[25]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 183).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[26]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 184).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[26]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 185).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[27]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 186).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[27]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 187).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[28]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 188).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[28]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 189).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[29]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 190).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[29]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 191).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[2]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 192).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[2]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 193).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[30]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 194).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[30]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 195).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[31]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 196).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[31]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 197).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[32]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 198).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[32]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 199).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[33]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 200).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[33]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 201).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[34]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 202).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[34]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 203).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[35]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 204).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[35]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 205).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[36]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 206).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[36]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 207).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[37]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 208).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[37]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 209).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[38]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 210).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[38]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 211).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[39]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 212).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[39]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 213).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[3]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 214).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[3]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 215).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[40]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 216).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[40]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 217).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[41]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 218).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[41]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 219).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[42]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 220).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[42]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 221).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[43]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 222).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[43]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 223).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[44]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 224).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[44]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 225).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[45]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 226).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[45]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 227).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[46]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 228).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[46]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 229).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[47]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 230).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[47]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 231).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[48]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 232).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[48]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 233).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[49]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 234).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[49]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 235).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[4]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 236).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[4]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 237).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[50]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 238).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[50]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 239).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[51]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 240).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[51]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 241).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[52]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 242).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[52]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 243).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[53]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 244).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[53]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 245).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[5]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 246).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[5]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 247).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[6]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 248).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[6]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 249).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[7]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 250).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[7]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 251).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[8]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 252).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[8]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 253).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[9]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 254).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[9]. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 255).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_ps_clk. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 256).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_ps_clk. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 257).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_ps_porb. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 258).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_ps_porb. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 259).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_ps_srstb. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 260).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_ps_srstb. (constraint file  s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 261).
+Applied set_property DONT_TOUCH = true for design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/processing_system7_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/blink_0. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 924.910 ; gain = 285.133
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 924.910 ; gain = 285.133
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 924.910 ; gain = 285.133
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5578] Moved timing constraint from pin 'design_1_i/processing_system7_0/FCLK_CLK0' to pin 'design_1_i/processing_system7_0/bbstub_FCLK_CLK0/O'
+INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 962.684 ; gain = 322.906
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 962.758 ; gain = 322.980
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 973.051 ; gain = 333.273
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 987.926 ; gain = 348.148
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 987.926 ; gain = 348.148
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 987.926 ; gain = 348.148
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 987.926 ; gain = 348.148
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 987.926 ; gain = 348.148
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 987.926 ; gain = 348.148
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------------------------+----------+
+|      |BlackBox name                   |Instances |
++------+--------------------------------+----------+
+|1     |design_1_blink_0_0              |         1|
+|2     |design_1_processing_system7_0_0 |         1|
++------+--------------------------------+----------+
+
+Report Cell Usage: 
++------+---------------------------------------+------+
+|      |Cell                                   |Count |
++------+---------------------------------------+------+
+|1     |design_1_blink_0_0_bbox_0              |     1|
+|2     |design_1_processing_system7_0_0_bbox_1 |     1|
+|3     |OBUF                                   |     1|
++------+---------------------------------------+------+
+
+Report Instance Areas: 
++------+-------------+---------+------+
+|      |Instance     |Module   |Cells |
++------+-------------+---------+------+
+|1     |top          |         |   318|
+|2     |  design_1_i |design_1 |   317|
++------+-------------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 987.926 ; gain = 348.148
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:18 . Memory (MB): peak = 987.926 ; gain = 302.809
+Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 987.926 ; gain = 348.148
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1013.367 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+24 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:27 . Memory (MB): peak = 1013.367 ; gain = 617.410
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1013.367 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'S:/post/snickBlink/project/snickBlink.runs/synth_1/design_1_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Feb 18 18:20:19 2020...
+[Tue Feb 18 18:20:25 2020] synth_1 finished
+wait_on_run: Time (s): cpu = 00:00:00 ; elapsed = 00:01:31 . Memory (MB): peak = 665.430 ; gain = 0.000
+[Tue Feb 18 18:20:29 2020] Launched impl_1...
+Run output will be captured here: S:/post/snickBlink/project/snickBlink.runs/impl_1/runme.log
+[Tue Feb 18 18:20:29 2020] Waiting for impl_1 to finish...
+
+*** Running vivado
+    with args -log design_1_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source design_1_wrapper.tcl -notrace
+
+
+****** Vivado v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source design_1_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 's:/post/snickBlink/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+Command: link_design -top design_1_wrapper -part xc7z010clg400-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-454] Reading design checkpoint 's:/post/snickBlink/src/ip/design_1_blink_0_0/design_1_blink_0_0.dcp' for cell 'design_1_i/blink_0'
+INFO: [Project 1-454] Reading design checkpoint 's:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.dcp' for cell 'design_1_i/processing_system7_0'
+INFO: [Netlist 29-17] Analyzing 7 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc] for cell 'design_1_i/processing_system7_0/inst'
+Finished Parsing XDC File [s:/post/snickBlink/src/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc] for cell 'design_1_i/processing_system7_0/inst'
+Parsing XDC File [S:/post/snickBlink/src/constraints.xdc]
+Finished Parsing XDC File [S:/post/snickBlink/src/constraints.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 784.184 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+12 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:12 . Memory (MB): peak = 784.184 ; gain = 383.434
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z010'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.502 . Memory (MB): peak = 806.234 ; gain = 22.051
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: 1d3f3d5d9
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1274.672 ; gain = 468.438
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 14dfad257
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 1418.383 ; gain = 0.000
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 24 cells
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: 14dfad257
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.053 . Memory (MB): peak = 1418.383 ; gain = 0.000
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 170531844
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.199 . Memory (MB): peak = 1418.383 ; gain = 0.000
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 88 cells
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: 170531844
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.214 . Memory (MB): peak = 1418.383 ; gain = 0.000
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 5 Shift Register Optimization | Checksum: 170531844
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.234 . Memory (MB): peak = 1418.383 ; gain = 0.000
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: 170531844
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.245 . Memory (MB): peak = 1418.383 ; gain = 0.000
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |               0  |              24  |                                              0  |
+|  Constant propagation         |               0  |               0  |                                              0  |
+|  Sweep                        |               0  |              88  |                                              0  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1418.383 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 1ab344261
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.299 . Memory (MB): peak = 1418.383 ; gain = 0.000
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+Ending Power Optimization Task | Checksum: 1ab344261
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 1418.383 ; gain = 0.000
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 1ab344261
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1418.383 ; gain = 0.000
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1418.383 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: 1ab344261
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1418.383 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+29 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1418.383 ; gain = 634.199
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1418.383 ; gain = 0.000
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.366 . Memory (MB): peak = 1418.383 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'S:/post/snickBlink/project/snickBlink.runs/impl_1/design_1_wrapper_opt.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file design_1_wrapper_drc_opted.rpt -pb design_1_wrapper_drc_opted.pb -rpx design_1_wrapper_drc_opted.rpx
+Command: report_drc -file design_1_wrapper_drc_opted.rpt -pb design_1_wrapper_drc_opted.pb -rpx design_1_wrapper_drc_opted.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file S:/post/snickBlink/project/snickBlink.runs/impl_1/design_1_wrapper_drc_opted.rpt.
+report_drc completed successfully
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z010'
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1433.180 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: fa9af1f9
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 1433.180 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1433.180 ; gain = 0.000
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 1172a20e7
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.780 . Memory (MB): peak = 1437.324 ; gain = 4.145
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 131a76816
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.879 . Memory (MB): peak = 1437.324 ; gain = 4.145
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 131a76816
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.884 . Memory (MB): peak = 1437.324 ; gain = 4.145
+Phase 1 Placer Initialization | Checksum: 131a76816
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.888 . Memory (MB): peak = 1437.324 ; gain = 4.145
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: 2113b0d8f
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.959 . Memory (MB): peak = 1437.324 ; gain = 4.145
+
+Phase 2.2 Global Placement Core
+
+Phase 2.2.1 Physical Synthesis In Placer
+INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-670] No setup violation found.  DSP Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  Shift Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  BRAM Register Optimization was not performed.
+INFO: [Physopt 32-949] No candidate nets found for HD net replication
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1437.324 ; gain = 0.000
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+----------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization                  |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+----------------------------------------------------------------------------------------------------------------------------------------
+|  Very High Fanout              |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  DSP Register                  |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Shift Register                |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  BRAM Register                 |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  HD Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total                         |            0  |              0  |                     0  |           0  |           2  |  00:00:00  |
+----------------------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.2.1 Physical Synthesis In Placer | Checksum: 155384e72
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1437.324 ; gain = 4.145
+Phase 2.2 Global Placement Core | Checksum: 1f60852d9
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1437.324 ; gain = 4.145
+Phase 2 Global Placement | Checksum: 1f60852d9
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1437.324 ; gain = 4.145
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 1592262ca
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1437.324 ; gain = 4.145
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 12919f4bf
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1437.324 ; gain = 4.145
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 1382a27d7
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1437.324 ; gain = 4.145
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 1382a27d7
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1437.324 ; gain = 4.145
+
+Phase 3.5 Small Shape Detail Placement
+Phase 3.5 Small Shape Detail Placement | Checksum: 19a3bfa82
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1437.324 ; gain = 4.145
+
+Phase 3.6 Re-assign LUT pins
+Phase 3.6 Re-assign LUT pins | Checksum: 1ca55a1b5
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1437.324 ; gain = 4.145
+
+Phase 3.7 Pipeline Register Optimization
+Phase 3.7 Pipeline Register Optimization | Checksum: 1ca55a1b5
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1437.324 ; gain = 4.145
+Phase 3 Detail Placement | Checksum: 1ca55a1b5
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1437.324 ; gain = 4.145
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 1701101f5
+
+Phase 4.1.1.1 BUFG Insertion
+INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to Illegal Netlist: 0.
+Phase 4.1.1.1 BUFG Insertion | Checksum: 1701101f5
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1442.340 ; gain = 9.160
+INFO: [Place 30-746] Post Placement Timing Summary WNS=16.054. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 2149d7b72
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1442.340 ; gain = 9.160
+Phase 4.1 Post Commit Optimization | Checksum: 2149d7b72
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1442.340 ; gain = 9.160
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 2149d7b72
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1442.340 ; gain = 9.160
+
+Phase 4.3 Placer Reporting
+Phase 4.3 Placer Reporting | Checksum: 2149d7b72
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1442.340 ; gain = 9.160
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1442.340 ; gain = 0.000
+Phase 4.4 Final Placement Cleanup | Checksum: 2383803d0
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1442.340 ; gain = 9.160
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 2383803d0
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1442.340 ; gain = 9.160
+Ending Placer Task | Checksum: 14a9180e8
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1442.340 ; gain = 9.160
+INFO: [Common 17-83] Releasing license: Implementation
+56 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1442.340 ; gain = 0.000
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.430 . Memory (MB): peak = 1442.379 ; gain = 0.039
+INFO: [Common 17-1381] The checkpoint 'S:/post/snickBlink/project/snickBlink.runs/impl_1/design_1_wrapper_placed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_io -file design_1_wrapper_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.066 . Memory (MB): peak = 1442.379 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_placed.rpt -pb design_1_wrapper_utilization_placed.pb
+INFO: [runtcl-4] Executing : report_control_sets -verbose -file design_1_wrapper_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1442.379 ; gain = 0.000
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z010'
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
+Checksum: PlaceDB: cf1c7751 ConstDB: 0 ShapeSum: 7b750997 RouteDB: 0
+
+Phase 1 Build RT Design
+Phase 1 Build RT Design | Checksum: 1612278df
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 1494.535 ; gain = 39.102
+Post Restoration Checksum: NetGraph: 78410cc5 NumContArr: e8e16c1a Constraints: 0 Timing: 0
+
+Phase 2 Router Initialization
+
+Phase 2.1 Create Timer
+Phase 2.1 Create Timer | Checksum: 1612278df
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 1502.570 ; gain = 47.137
+
+Phase 2.2 Fix Topology Constraints
+Phase 2.2 Fix Topology Constraints | Checksum: 1612278df
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 1508.598 ; gain = 53.164
+
+Phase 2.3 Pre Route Cleanup
+Phase 2.3 Pre Route Cleanup | Checksum: 1612278df
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 1508.598 ; gain = 53.164
+ Number of Nodes with overlaps = 0
+
+Phase 2.4 Update Timing
+Phase 2.4 Update Timing | Checksum: 253f7dc2e
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 1511.707 ; gain = 56.273
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=15.912 | TNS=0.000  | WHS=-0.047 | THS=-0.417 |
+
+Phase 2 Router Initialization | Checksum: 1776dca2b
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 1515.027 ; gain = 59.594
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0 %
+  Global Horizontal Routing Utilization  = 0 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 197
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 197
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+
+Phase 3 Initial Routing
+Phase 3 Initial Routing | Checksum: 1a8cbddf6
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 1516.141 ; gain = 60.707
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=15.603 | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 4.1 Global Iteration 0 | Checksum: 11d22759d
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 1516.145 ; gain = 60.711
+Phase 4 Rip-up And Reroute | Checksum: 11d22759d
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 1516.145 ; gain = 60.711
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+Phase 5.1 Delay CleanUp | Checksum: 11d22759d
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 1516.145 ; gain = 60.711
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 11d22759d
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 1516.145 ; gain = 60.711
+Phase 5 Delay and Skew Optimization | Checksum: 11d22759d
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 1516.145 ; gain = 60.711
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: f4ad7e80
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1516.145 ; gain = 60.711
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=15.756 | TNS=0.000  | WHS=0.253  | THS=0.000  |
+
+Phase 6.1 Hold Fix Iter | Checksum: f4ad7e80
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1516.145 ; gain = 60.711
+Phase 6 Post Hold Fix | Checksum: f4ad7e80
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1516.145 ; gain = 60.711
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.0173142 %
+  Global Horizontal Routing Utilization  = 0.0142463 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 7 Route finalize | Checksum: f4ad7e80
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1516.145 ; gain = 60.711
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: f4ad7e80
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1518.156 ; gain = 62.723
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 5cc95ff0
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1518.156 ; gain = 62.723
+
+Phase 10 Post Router Timing
+INFO: [Route 35-57] Estimated Timing Summary | WNS=15.756 | TNS=0.000  | WHS=0.253  | THS=0.000  |
+
+INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
+Phase 10 Post Router Timing | Checksum: 5cc95ff0
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1518.156 ; gain = 62.723
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1518.156 ; gain = 62.723
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+73 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:11 . Memory (MB): peak = 1518.156 ; gain = 75.777
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1518.156 ; gain = 0.000
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.436 . Memory (MB): peak = 1528.035 ; gain = 9.879
+INFO: [Common 17-1381] The checkpoint 'S:/post/snickBlink/project/snickBlink.runs/impl_1/design_1_wrapper_routed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file design_1_wrapper_drc_routed.rpt -pb design_1_wrapper_drc_routed.pb -rpx design_1_wrapper_drc_routed.rpx
+Command: report_drc -file design_1_wrapper_drc_routed.rpt -pb design_1_wrapper_drc_routed.pb -rpx design_1_wrapper_drc_routed.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file S:/post/snickBlink/project/snickBlink.runs/impl_1/design_1_wrapper_drc_routed.rpt.
+report_drc completed successfully
+INFO: [runtcl-4] Executing : report_methodology -file design_1_wrapper_methodology_drc_routed.rpt -pb design_1_wrapper_methodology_drc_routed.pb -rpx design_1_wrapper_methodology_drc_routed.rpx
+Command: report_methodology -file design_1_wrapper_methodology_drc_routed.rpt -pb design_1_wrapper_methodology_drc_routed.pb -rpx design_1_wrapper_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 2 threads
+INFO: [Coretcl 2-1520] The results of Report Methodology are in file S:/post/snickBlink/project/snickBlink.runs/impl_1/design_1_wrapper_methodology_drc_routed.rpt.
+report_methodology completed successfully
+INFO: [runtcl-4] Executing : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
+Command: report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+85 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+INFO: [runtcl-4] Executing : report_route_status -file design_1_wrapper_route_status.rpt -pb design_1_wrapper_route_status.pb
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -file design_1_wrapper_timing_summary_routed.rpt -pb design_1_wrapper_timing_summary_routed.pb -rpx design_1_wrapper_timing_summary_routed.rpx -warn_on_violation 
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+INFO: [runtcl-4] Executing : report_incremental_reuse -file design_1_wrapper_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-1062] Incremental flow is disabled. No incremental reuse Info to report.
+INFO: [runtcl-4] Executing : report_clock_utilization -file design_1_wrapper_clock_utilization_routed.rpt
+INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file design_1_wrapper_bus_skew_routed.rpt -pb design_1_wrapper_bus_skew_routed.pb -rpx design_1_wrapper_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+Command: write_bitstream -force design_1_wrapper.bit -bin_file
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z010'
+Running DRC as a precondition to command write_bitstream
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado 12-3199] DRC finished with 0 Errors
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+INFO: [Designutils 20-2272] Running write_bitstream with 2 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Writing bitstream ./design_1_wrapper.bit...
+Writing bitstream ./design_1_wrapper.bin...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Project 1-118] WebTalk data collection is enabled (User setting is ON. Install Setting is ON.).
+INFO: [Common 17-186] 'S:/post/snickBlink/project/snickBlink.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Tue Feb 18 18:21:44 2020. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2019.1/doc/webtalk_introduction.html.
+INFO: [Common 17-83] Releasing license: Implementation
+105 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 1969.816 ; gain = 411.230
+INFO: [Common 17-206] Exiting Vivado at Tue Feb 18 18:21:45 2020...
+[Tue Feb 18 18:21:49 2020] impl_1 finished
+wait_on_run: Time (s): cpu = 00:00:01 ; elapsed = 00:01:20 . Memory (MB): peak = 665.430 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Feb 18 18:21:53 2020...
