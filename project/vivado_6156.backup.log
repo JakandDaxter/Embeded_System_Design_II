@@ -1,0 +1,97 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sat Feb 22 09:00:09 2020
+# Process ID: 6156
+# Current directory: C:/Users/axt3290/Downloads/blinkAXI-Aliana/project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8140 C:\Users\axt3290\Downloads\blinkAXI-Aliana\project\blinkAXI.xpr
+# Log file: C:/Users/axt3290/Downloads/blinkAXI-Aliana/project/vivado.log
+# Journal file: C:/Users/axt3290/Downloads/blinkAXI-Aliana/project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/axt3290/Downloads/blinkAXI-Aliana/project/blinkAXI.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/axt3290/Downloads/blinkAXI/project' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/axt3290/Downloads/blinkAXI-Aliana/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:06 . Memory (MB): peak = 868.684 ; gain = 173.539
+update_compile_order -fileset sources_1
+open_bd_design {C:/Users/axt3290/Downloads/blinkAXI-Aliana/src/design_1.bd}
+Adding component instance block -- xilinx.com:user:PWMAXI:1.0 - PWMAXI_1
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps7_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_50M
+Adding component instance block -- xilinx.com:ip:util_vector_logic:2.0 - util_vector_logic_0
+Adding component instance block -- xilinx.com:user:PWM_Lab2:1.0 - PWM_Lab2_0
+Successfully read diagram <design_1> from BD file <C:/Users/axt3290/Downloads/blinkAXI-Aliana/src/design_1.bd>
+open_bd_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 1036.922 ; gain = 78.777
+delete_bd_objs [get_bd_nets util_vector_logic_0_Res] [get_bd_nets PWMAXI_1_enable] [get_bd_nets PWMAXI_1_period] [get_bd_nets PWMAXI_1_duty] [get_bd_nets PWM_Lab2_0_out_wave] [get_bd_cells PWM_Lab2_0]
+regenerate_bd_layout
+regenerate_bd_layout
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:Top:1.0 Top_0
+endgroup
+connect_bd_net [get_bd_pins Top_0/en] [get_bd_pins PWMAXI_1/enable]
+connect_bd_net [get_bd_pins Top_0/PERIOD] [get_bd_pins PWMAXI_1/period]
+connect_bd_net [get_bd_pins Top_0/DUTY] [get_bd_pins PWMAXI_1/duty]
+connect_bd_net [get_bd_ports pwm] [get_bd_pins Top_0/PWM]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/processing_system7_0/FCLK_CLK0 (50 MHz)" }  [get_bd_pins Top_0/CLOCK]
+regenerate_bd_layout
+regenerate_bd_layout -routing
+save_bd_design
+Wrote  : <C:\Users\axt3290\Downloads\blinkAXI-Aliana\src\design_1.bd> 
+Wrote  : <C:/Users/axt3290/Downloads/blinkAXI-Aliana/src/ui/bd_1f5defd0.ui> 
+delete_bd_objs [get_bd_nets rst_ps7_0_50M_peripheral_aresetn]
+undo
+INFO: [Common 17-17] undo 'delete_bd_objs [get_bd_nets rst_ps7_0_50M_peripheral_aresetn]'
+undo
+INFO: [Common 17-17] undo 'regenerate_bd_layout -routing'
+undo
+INFO: [Common 17-17] undo 'regenerate_bd_layout'
+undo
+INFO: [Common 17-17] undo 'apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/processing_system7_0/FCLK_CLK0 (50 MHz)" }  [get_bd_pins Top_0/CLOCK]'
+connect_bd_net [get_bd_pins Top_0/reset] [get_bd_pins util_vector_logic_0/Res]
+connect_bd_net [get_bd_pins Top_0/CLOCK] [get_bd_pins processing_system7_0/FCLK_CLK0]
+regenerate_bd_layout
+regenerate_bd_layout -routing
+set_property location {3 924 240} [get_bd_cells PWMAXI_1]
+set_property location {3 1001 495} [get_bd_cells Top_0]
+save_bd_design
+Wrote  : <C:\Users\axt3290\Downloads\blinkAXI-Aliana\src\design_1.bd> 
+Wrote  : <C:/Users/axt3290/Downloads/blinkAXI-Aliana/src/ui/bd_1f5defd0.ui> 
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+WARNING: [BD 41-927] Following properties on pin /Top_0/CLOCK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_0_FCLK_CLK0 
+Wrote  : <C:\Users\axt3290\Downloads\blinkAXI-Aliana\src\design_1.bd> 
+VHDL Output written to : C:/Users/axt3290/Downloads/blinkAXI-Aliana/src/synth/design_1.vhd
+VHDL Output written to : C:/Users/axt3290/Downloads/blinkAXI-Aliana/src/sim/design_1.vhd
+VHDL Output written to : C:/Users/axt3290/Downloads/blinkAXI-Aliana/src/hdl/design_1_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_vector_logic_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block PWMAXI_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Top_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/axt3290/Downloads/blinkAXI-Aliana/src/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file C:/Users/axt3290/Downloads/blinkAXI-Aliana/src/hw_handoff/design_1.hwh
+Generated Block Design Tcl file C:/Users/axt3290/Downloads/blinkAXI-Aliana/src/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File C:/Users/axt3290/Downloads/blinkAXI-Aliana/src/synth/design_1.hwdef
+[Sat Feb 22 09:03:30 2020] Launched design_1_Top_0_0_synth_1, design_1_auto_pc_0_synth_1...
+Run output will be captured here:
+design_1_Top_0_0_synth_1: C:/Users/axt3290/Downloads/blinkAXI-Aliana/project/blinkAXI.runs/design_1_Top_0_0_synth_1/runme.log
+design_1_auto_pc_0_synth_1: C:/Users/axt3290/Downloads/blinkAXI-Aliana/project/blinkAXI.runs/design_1_auto_pc_0_synth_1/runme.log
+[Sat Feb 22 09:03:30 2020] Launched synth_1...
+Run output will be captured here: C:/Users/axt3290/Downloads/blinkAXI-Aliana/project/blinkAXI.runs/synth_1/runme.log
+launch_runs: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1187.617 ; gain = 85.160
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Sat Feb 22 09:05:15 2020] Launched impl_1...
+Run output will be captured here: C:/Users/axt3290/Downloads/blinkAXI-Aliana/project/blinkAXI.runs/impl_1/runme.log
+exit
+INFO: [Common 17-206] Exiting Vivado at Sat Feb 22 09:07:25 2020...

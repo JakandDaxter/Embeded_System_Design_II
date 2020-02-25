@@ -1,0 +1,32 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Mon Feb 24 19:09:50 2020
+# Process ID: 14760
+# Current directory: S:/ESD2/labs/lab3/project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12480 S:\ESD2\labs\lab3\project\blinkAXI.xpr
+# Log file: S:/ESD2/labs/lab3/project/vivado.log
+# Journal file: S:/ESD2/labs/lab3/project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project S:/ESD2/labs/lab3/project/blinkAXI.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/axt3290/Downloads/blinkAXI-Aliana/project' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 's:/ESD2/labs/lab3/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+open_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:12 . Memory (MB): peak = 829.816 ; gain = 125.305
+update_compile_order -fileset sources_1
+open_bd_design {S:/ESD2/labs/lab3/src/design_1.bd}
+Adding component instance block -- xilinx.com:user:PWMAXI:1.0 - PWMAXI_1
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps7_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_50M
+Adding component instance block -- xilinx.com:ip:util_vector_logic:2.0 - util_vector_logic_0
+Adding component instance block -- xilinx.com:user:Top:1.0 - Top_0
+Successfully read diagram <design_1> from BD file <S:/ESD2/labs/lab3/src/design_1.bd>
+open_bd_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1033.445 ; gain = 146.770
