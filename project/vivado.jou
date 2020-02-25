@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Mon Feb 24 19:09:50 2020
+# Process ID: 14760
+# Current directory: S:/ESD2/labs/lab3/project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12480 S:\ESD2\labs\lab3\project\blinkAXI.xpr
+# Log file: S:/ESD2/labs/lab3/project/vivado.log
+# Journal file: S:/ESD2/labs/lab3/project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project S:/ESD2/labs/lab3/project/blinkAXI.xpr
+update_compile_order -fileset sources_1
+open_bd_design {S:/ESD2/labs/lab3/src/design_1.bd}

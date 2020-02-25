@@ -1,0 +1,46 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sat Feb 22 09:00:09 2020
+# Process ID: 6156
+# Current directory: C:/Users/axt3290/Downloads/blinkAXI-Aliana/project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8140 C:\Users\axt3290\Downloads\blinkAXI-Aliana\project\blinkAXI.xpr
+# Log file: C:/Users/axt3290/Downloads/blinkAXI-Aliana/project/vivado.log
+# Journal file: C:/Users/axt3290/Downloads/blinkAXI-Aliana/project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/axt3290/Downloads/blinkAXI-Aliana/project/blinkAXI.xpr
+update_compile_order -fileset sources_1
+open_bd_design {C:/Users/axt3290/Downloads/blinkAXI-Aliana/src/design_1.bd}
+delete_bd_objs [get_bd_nets util_vector_logic_0_Res] [get_bd_nets PWMAXI_1_enable] [get_bd_nets PWMAXI_1_period] [get_bd_nets PWMAXI_1_duty] [get_bd_nets PWM_Lab2_0_out_wave] [get_bd_cells PWM_Lab2_0]
+regenerate_bd_layout
+regenerate_bd_layout
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:Top:1.0 Top_0
+endgroup
+connect_bd_net [get_bd_pins Top_0/en] [get_bd_pins PWMAXI_1/enable]
+connect_bd_net [get_bd_pins Top_0/PERIOD] [get_bd_pins PWMAXI_1/period]
+connect_bd_net [get_bd_pins Top_0/DUTY] [get_bd_pins PWMAXI_1/duty]
+connect_bd_net [get_bd_ports pwm] [get_bd_pins Top_0/PWM]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/processing_system7_0/FCLK_CLK0 (50 MHz)" }  [get_bd_pins Top_0/CLOCK]
+regenerate_bd_layout
+regenerate_bd_layout -routing
+save_bd_design
+delete_bd_objs [get_bd_nets rst_ps7_0_50M_peripheral_aresetn]
+undo
+undo
+undo
+undo
+connect_bd_net [get_bd_pins Top_0/reset] [get_bd_pins util_vector_logic_0/Res]
+connect_bd_net [get_bd_pins Top_0/CLOCK] [get_bd_pins processing_system7_0/FCLK_CLK0]
+regenerate_bd_layout
+regenerate_bd_layout -routing
+set_property location {3 924 240} [get_bd_cells PWMAXI_1]
+set_property location {3 1001 495} [get_bd_cells Top_0]
+save_bd_design
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
